@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('reset.css');
+@import url('logo.css');
+
+#logo {
+    display: block;
+    margin: 40px auto 60px;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+section {
+    position: relative;
+    height: 400px;
+    width: 50vw;
+    margin: auto;
+}
+
+form {
+    position: relative;
+    width: 50vw;
+}
+
+form label,
+form input {
+    display: block;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #e4e4e4;
+    margin-bottom: 30px;
+    width: 70%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-button {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: fit-content;
+    padding: 10px 18px;
+    border-radius: 5px;
+    background-color: #3BB4F6;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.form-button:hover {
+    background-color: #36a0da;
+    cursor: pointer;
+}

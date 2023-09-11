@@ -1,0 +1,13 @@
+div {
+    display: inline-block;
+}
+
+.container-a {
+    background-color: red;
+    width: 200px;
+    height: 100px;
+}
+
+.container-b {
+    background-color: burlywood;
+}

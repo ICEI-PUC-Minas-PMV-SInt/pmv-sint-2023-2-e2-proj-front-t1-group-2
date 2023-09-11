@@ -1,0 +1,16 @@
+#localStorageOutput {
+    min-height: 50px;
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 1rem;
+    background-color: rgb(221, 229, 230);
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+#localStorageOutput button {
+    display: block;
+    margin-left: auto;
+}

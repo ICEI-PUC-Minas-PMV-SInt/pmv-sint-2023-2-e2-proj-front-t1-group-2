@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Aplicação Web - Revisão de motos</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/d56a2b5f3f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+  <link rel="stylesheet" href="../styles/logo.css">
+</head>
+
+<body>
+  <!-- *********************************************-->
+  <header class="menu">
+    <img src="../assets/logo/moto-texto.png" alt="Moto Helper" id="logo-menu">
+
+    <div class="perfil">
+      <span class="text-perfil">Olá, Geraldo</span>
+      <div class="perfil__im px-5">
+          <img class="perfil__img" src="../assets/img/geraldo.png" alt="Foto do perfil">
+      </div>
+  </div>
+  </header>
+  <!-- *********************************************-->
+
+  <div class="container-fluid principal">
+    <div class="row">
+
+      <div class="aside col-2">
+        
+        <ul class="aside__list">
+              <li><a href="cadastroClientes.html"><span class="fas fa-address-card"></span>Clientes </a></li>
+              <li><a href="cadastroVeiculo.html"><span class="fas fa-motorcycle"></span>Veículos</a></li>
+              <li><a href="agendamento.html"><span class="fas fa-calendar"></span>Agendamento</a></li>
+              <li><a href="#"><span class="fas fa-clipboard-list"></span>Tabela Revisões</a></li>
+              <li><a href="index.html"><span class="fas fa-sign-out"></span>Sair</a></li>
+         </ul>
+      </div>
+
+      <!-- -----------------------------------conteudo ---------------------------------------- --> 
+
+      <div class="container col-9">
+        <div class="container p-3">
+          <h3>Tabela de precos</h3>
+        </div>
+
+      <table class="table table-hover table-dark">
+        <thead class="table-warning bg-info">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Cilindrada</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">377</th>
+            <td>Pastilhas de freio</td>
+            <td>Fazer</td>
+            <td>250</td>
+            <td>R$ 450,00</td>
+          </tr>
+          <tr>
+            <th scope="row">784</th>
+            <td>Pastilhas de freio</td>
+            <td>BMW - GS</td>
+            <td>1250</td>
+            <td>R$ 4050,00</td>
+          </tr>
+          <tr>
+            <th scope="row">127</th>
+            <td>Pastilhas de freio</td>
+            <td>Fazer</td>
+            <td>250</td>
+            <td>R$ 450,00</td>
+          </tr>
+          <tr>
+            <th scope="row">456</th>
+            <td>Óleo motor 20W50</td>
+            <td>CG</td>
+            <td>150 / 160</td>
+            <td>R$ 75,00</td>
+          </tr>
+          <tr>
+            <th scope="row">368</th>
+            <td>Pastilhas de freio</td>
+            <td>Bros</td>
+            <td>150/ 160</td>
+            <td>R$ 289,00</td>
+          </tr>
+          <tr>
+            <th scope="row">002</th>
+            <td>Vela ignição</td>
+            <td>Fazer</td>
+            <td>150</td>
+            <td>R$ 45,00</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    
+  </div>
+
+    
+
+ 
+
+  <script src=""></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
