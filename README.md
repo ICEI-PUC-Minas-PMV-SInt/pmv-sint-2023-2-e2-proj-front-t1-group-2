@@ -1,4 +1,4 @@
-# Aplicação Web de assistência no controle de revisão de motocicletas
+# Aplicação Web Cadastro de currículos para profissionais autonomos
 
 `CURSO`Tecnologia em Sistemas para Internet.
 
@@ -6,19 +6,20 @@
 
 `SEMESTRE`02/2023
 
-Projeto de Aplicação Web direcionado para motocicletas, que visa auxiliar oficinas e motociclistas na manutenção preventiva e conserto dos veículos. Através de uma plataforma própria para inclusão de dados pela oficina, acesso rápido ao histórico de dados de suas motos pelo cliente e a facilidade na comunicação entre ambos, o projeto possibilita um suporte de navegação mais adequado e eficiente aos seus usuários e atende as expectativas dos que buscam mais atenção nos cuidados com suas motos.
+Projeto de Aplicação Web .....
 
 ## Integrantes
 
-* Arthur Wilson de Sousa
-* Cheyenne Fontes de Souza
-* Igor Antônio de Oliveira Lloyd 
-* Renato Cacildo Junior 
-* Rodolfo Cícero Lacerda Lana
+* Beatriz Guimaraes Bandeira Correia  
+* Elisabete Romana dos Santos 
+* Isabella Cristina da Silva Prado
+* Murilo Silva Rezende
+* Nickolas Ribeiro de Mendonça
+* Rafaela Rodrigues Santana
 
 ## Orientador
 
-* Fabiano Costa Teixeira 
+* Nathalia Assis Valentim 
 
 ## Instruções de utilização
 
