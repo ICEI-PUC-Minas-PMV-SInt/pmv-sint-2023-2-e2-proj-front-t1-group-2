@@ -1,59 +1,40 @@
 # Introdução
 
-Milhões de brasileiros possuem motocicletas e a revisão e manutenção desses veículos é algo comum na vida dessas pessoas, mas, apesar disso, muitas enfrentam dificuldades com essa atividade, seja devido a desorganização ou a falta de tempo.
+Conquistar novos clientes, uma nova oportunidade na carreira e vender seus serviços e produtos, são obstáculos enfrentados por um profissional autônomo. Em um mundo cada vez mais digital, recursos como ferramentas de marketing digital podem auxiliar esses profissionais (LAURIA, 2019). 
 
-Com o objetivo de solucionar essa dor, desenvolvemos um aplicativo cujo objetivo é ajudar o motociclista a ter um controle melhor das revisões do seu veículo. Dessa forma, ele não precisará de se preocupar em lembrar quando foi a última revisão do automóvel e nem de quando deverá ser realizada a próxima. Tudo isso fica por conta do aplicativo que armazena o histórico das revisões e gera um lembrete com as datas futuras.
-
-O sistema também mostra o histórico das peças trocadas e o preço pago pelo serviço prestado. Tudo isso com o objetivo de organizar e aumentar o controle que os motociclistas têm sob o seu veículo.
+Através de portifólios online é possível exibir os melhores projetos e até mesmo vender produtos e serviços. Dessa forma, podem surgir novas oportunidades de emprego, afinal essas ferramentas podem ajudar na conquista de novos clientes e empregadores (“PORTIFÓLIO DIGITAL: O QUE É E QUAL A IMPORTÂNCIA PARA A SUA CARREIRA?”, 2021).
 
 
 ## Problema
 
-Qual a importância das aplicações para web no controle de revisão de motocicletas atualmente?
+A dificuldade de divulgação e venda de serviços de profissionais autônomos em páginas próprias. 
 
-Muitas pessoas possuem dificuldade em gerenciar a manutenção de suas motocicletas, seja por falta de tempo ou de conhecimento. Frequentemente elas esquecem as datas em que é preciso levar suas motos até uma oficina para fazer revisão, dificilmente lembram-se do histórico de manutenções em seus veículos ou valores gastos com isso e também podem não perceber notificações de mensagens da oficina que está prestando o serviço, visto que é comum que essas mensagens sejam enviadas por whatsapp, que atualmente é o meio de comunicação em comum mais utilizado para diversos assuntos entre as pessoas causando uma grande demanda de mensagens para se atentar. Isso gera problemas como: manutenções em atraso, dificuldade na comunicação entre o cliente e a oficina, falta de conhecimento sobre a situação atual do veículo por falta de histórico acessível, entre outros.  
+A questão da divulgação e venda de serviços de profissionais autônomos em suas próprias páginas é um desafio comum enfrentado por muitos indivíduos talentosos. Ter um portfólio online é apenas o primeiro passo; o próximo é atrair a atenção do público-alvo. Para superar essa dificuldade, é essencial adotar estratégias eficazes de marketing digital, como otimização de mecanismos de busca (SEO), presença ativa nas redes sociais e o uso inteligente de conteúdo de qualidade para envolver e educar potenciais clientes.
 
-Para tentar solucionar tais questões as pessoas recorrem a aplicativos que ajudam tanto na organização, como disponibilizando um histórico e prevendo datas em que haverá necessidade de revisões no veículo, quanto nos envios de lembretes e notificações sobre o assunto.
+Além disso, estabelecer parcerias com outras empresas locais e participar de eventos da comunidade pode ser uma maneira poderosa de construir uma presença sólida e conquistar a confiança do público. O sucesso na divulgação e venda de serviços depende não apenas da qualidade do trabalho, mas também da habilidade em promovê-lo de forma eficaz no mundo digital em constante evolução.
+
+Para tentar solucionar tais questões as propomos um template de curriculo no qual as pessoas possam dar publicidade aos seus trabalhos e serviços.
 
 ## Objetivos
 
- - Ajudar as pessoas a cuidar melhor dos seus veículos.
- 
- - Diminuir a ansiedade do motorista de ter que lembrar quando será a próxima revisão.
- 
- - Melhorar o controle que o motorista possui a respeito do próprio automóvel.
- 
- - Ajudar a diminuir os acidentes de trânsito causados pela falta de manutenção preventiva.
- 
- - Melhorar a comunicação entre o usuário e a oficina.
+O objetivo do projeto é criar uma aplicação Web, single page, utilizando react, no qual os usuários possam utilizar como base para criação de um currículo virtual e oferecer seus serviços com possibilidade de contato e link de pagamento
  
 
 
 ## Justificativa
 
-As aplicações para web têm sido frequentemente utilizadas como fonte de ajuda, em diversas áreas, por grande parte da população. Devido ao aumento constante no número de usuários de motos, atualmente existem muitos aplicativos na área de mecânica desenvolvidos para auxiliar motociclistas e oficinas no gerenciamento desses veículos em variados assuntos. 
+AÉ amplamente reconhecido que a internet tem encurtado distâncias e provocado uma série de transformações nas nossas práticas de consumo, abrangendo áreas como entretenimento, compras online, métodos de estudo e até mesmo a busca por oportunidades de trabalho. De acordo com dados extraídos da Pesquisa dos Profissionais Brasileiros de 2019, conduzida pela Catho e que contou com a participação de mais de 6,2 mil entrevistados, a maioria dos profissionais atualmente recorre à internet em busca de oportunidades de emprego, sendo que 78% deles direcionam suas pesquisas para sites especializados em vagas de trabalho. 
 
-Ter uma moto conservada e em bom funcionamento hoje em dia significa segurança para o condutor, redução de custos e acima de tudo a redução no número de acidentes de trânsito causados por falhas mecânicas.
+Segundo informações veiculadas no portal Melhor RH, a pesquisa realizada pela Catho em 2020 estima que as pessoas que optam por procurar emprego de forma convencional, ou seja, indo pessoalmente a empresas e distribuindo currículos, incorrem em um custo mensal médio de cerca de R$ 300. Esse cálculo leva em consideração despesas relacionadas a transporte, alimentação, impressão de currículos e uso de internet móvel. Esses números destacam a relevância do ambiente online não apenas para a redução de custos, mas também para ampliar o alcance das oportunidades disponíveis, uma vez que a busca por emprego na internet é mais ágil e abrangente. 
 
-Observando o cenário atual e a alta demanda em busca de aplicativos de auxílio no gerenciamento de motocicletas, faz-se necessário o desenvolvimento de um sistema exclusivamente voltado para manutenções preventivas desses veículos, que agregue mais valor ao proprietário e a motocicleta, possibilitando que o usuário da moto tenha acesso um canal de contato rápido e prático com a oficina ou mecânico, e permitindo-lhe a organização necessária para que o esquecimento ou a falta de informação não impeçam que seu veículo esteja com as revisões sempre em dia.
-
-Segundo dados do DataSUS, cerca de 32.879 pessoas morreram em decorrência de acidentes de trânsito no ano de 2019. Fonte: Agência Senado
-
-https://www12.senado.leg.br/noticias/materias/2021/09/24/brasil-precisa-agir-para-reduzir-mortes-no-transito-alertam-participantes-de-sessao-especial#:~:text=Estat%C3%ADsticas%20com%20rosto,decorr%C3%AAncia%20de%20acidentes%20de%20tr%C3%A2nsito.
-
-Uma das principais causas de colisões em rodovias federais foram os defeitos mecânicos. Fonte: Auto Papo - UOL
-
-https://autopapo.uol.com.br/noticia/acidentes-transito-falta-manutencao/
+Nesse contexto, o presente projeto foi concebido como uma resposta às dificuldades enfrentadas por aqueles que desejam criar currículos de fácil acesso e facilitar a divulgação de produtos e serviços, especialmente para trabalhadores autônomos atuando no cenário digital. O objetivo central deste projeto é simplificar a criação de currículos virtuais e portfólios, abrangendo diversas áreas, incluindo a venda de serviços. Além disso, busca-se facilitar os processos de divulgação e pagamento, para quem trabalha com venda de serviços e produtos, além de proporcionar agilidade para aqueles que estão em busca de novas oportunidades (“CERCA DE 80% DOS PROFISSIONAIS PROCURAM OPORTUNIDADES ONLINE”, 2020). 
 
 
 
 ## Público-Alvo
-• Motociclistas de aplicativos que tem o habito de realizar apenas as manutenções corretivas e deixam em segundo plano as preventivas, devido a rotina constante de entregas, com isso sua segurança fica vulnerável e um controle através de aplicativo facilitaria esse domínio. <br>
 
-•	Motociclistas e Motoqueiros de moto clubes que possuem uma moto para o dia a dia e também para o prazer de fazer viagens longas e curtas, necessitam  controlar constantemente as condições mecânicas da sua moto, assim um aplicativo interligado com a oficina mecânica e concessionária facilitaria essa interface.
-<br>
-
-• Pequenas concessionárias e Oficinas mecânicas que utilizam planilhas e softwares próprios de controle de manutenção e também de uso de whatsapp como interface de demonstrações e informações da moto com o cliente e necessitam de um aplicativo que facilite essa interação.  <br>
+Profissionais autônomos de todas as áreas que desejam divulgar e vender seus serviços no ambiente virtual com mais facilidade e agilidade. 
+  <br>
 <h2>Grafico Stakeholders<h2/>
  <img src="../imagens/mapa-stakeholders.png" width="600px" />
 
