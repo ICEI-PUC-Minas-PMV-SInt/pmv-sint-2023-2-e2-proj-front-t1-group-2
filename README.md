@@ -4,7 +4,7 @@
 
 `DISCIPLINA`Projeto: Aplicações Web.
 
-`SEMESTRE`01/2022
+`SEMESTRE`02/2023
 
 Projeto de Aplicação Web direcionado para motocicletas, que visa auxiliar oficinas e motociclistas na manutenção preventiva e conserto dos veículos. Através de uma plataforma própria para inclusão de dados pela oficina, acesso rápido ao histórico de dados de suas motos pelo cliente e a facilidade na comunicação entre ambos, o projeto possibilita um suporte de navegação mais adequado e eficiente aos seus usuários e atende as expectativas dos que buscam mais atenção nos cuidados com suas motos.
 
