@@ -21,8 +21,6 @@ function App() {
                 <NavLink to="/Home" className="nav-link">Home</NavLink>
                 <NavLink to="/about" className="nav-link">About</NavLink>
 
-
-
                 <div className="input-group">
                   <input type="text" className="form-control" placeholder="Search" />
                   <div className="input-group-append">
@@ -30,8 +28,6 @@ function App() {
                       <FaSearch />
                     </span>
 
-
-                    {/* Colocar outras paginas aqui */}
                   </div>
                 </div>
               </div>
