@@ -3,56 +3,55 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
-import { BrowserRouter as Router, NavLink, Route, Routes, Form } from 'react-router-dom';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JavaScript and Popper.js
+import { BrowserRouter as Router, NavLink, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { FaSearch, FaCopyright } from "react-icons/fa";
 
 function App() {
+  const handleSearchClick = () => {
+    // Adicione a lógica aqui para lidar com o clique no ícone de pesquisa
+    console.log('Ícone de pesquisa clicado!');
+  };
+
   return (
     <Router>
       <div className="App">
+        {/* Header */}
         <header className="App-header">
-          <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <Navbar className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
             <NavLink to="/" className="navbar-brand bg-light fixed-left">Currículos</NavLink>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav ml-auto">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto fixed-left">
                 <NavLink to="/Home" className="nav-link">Home</NavLink>
                 <NavLink to="/About" className="nav-link">About</NavLink>
                 <NavLink to="/Login" className="nav-link">Login</NavLink>
-
-                <div className="input-group">
-                  <input type="text" className="form-control" placeholder="Search" />
-                  <div className="input-group-append">
-                    <span className="input-group-text" id="basic-addon2">
-                      <FaSearch />
-                    </span>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </nav>
+              </Nav>
+              <Form inline><FormControl type="text" placeholder="Pesquisar" className="mr-sm-2" /><Button variant="outline-success"><FaSearch /></Button>
+              </Form>
+            </Navbar.Collapse>
+          </Navbar>
         </header>
-        <body>
+
+        {/* Body */}
+        <div className="container">
           <div className="navbar-nav">
             <Routes>
               <Route path="/Home" element={<Home />} />
               <Route path="/About" element={<About />} />
-              <Route path="/About" element={<Login />} />
+              <Route path="/Login" element={<Login />} />
             </Routes>
           </div>
-        </body>
+        </div>
+
+        {/* Footer */}
+        <footer>
+          <FaCopyright />
+          Grupo 2
+        </footer>
       </div>
-      <footer> <FaCopyright />
-        Grupo 2
-      </footer>
-
     </Router>
-
   );
 }
 
