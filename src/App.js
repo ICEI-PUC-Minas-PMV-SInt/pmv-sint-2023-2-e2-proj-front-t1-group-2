@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
+import Login from './pages/Login';
 import { BrowserRouter as Router, NavLink, Route, Routes, Form } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JavaScript and Popper.js
 import { FaSearch, FaCopyright } from "react-icons/fa";
@@ -19,7 +20,8 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav ml-auto">
                 <NavLink to="/Home" className="nav-link">Home</NavLink>
-                <NavLink to="/about" className="nav-link">About</NavLink>
+                <NavLink to="/About" className="nav-link">About</NavLink>
+                <NavLink to="/Login" className="nav-link">Login</NavLink>
 
                 <div className="input-group">
                   <input type="text" className="form-control" placeholder="Search" />
@@ -40,6 +42,7 @@ function App() {
             <Routes>
               <Route path="/Home" element={<Home />} />
               <Route path="/About" element={<About />} />
+              <Route path="/About" element={<Login />} />
             </Routes>
           </div>
         </body>
