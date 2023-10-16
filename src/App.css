@@ -52,3 +52,42 @@ color: blanchedalmond;
   grid-area: auto;
 
 }
+
+/* Profile container styles */
+.perfil-container {
+  width: 300px;
+  height: 150px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Photo styles */
+.foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+/* Information section styles */
+.info {
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+}
+
+/* Heading styles within the information section */
+.info h3 {
+  margin: 0;
+}
+
+/* Subheading styles within the information section */
+.info h4 {
+  margin: 0;
+}
