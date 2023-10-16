@@ -7,14 +7,13 @@ import { FaCopyright } from "react-icons/fa";
 import BarraMenu from './pages/BarraMenu';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 function App() {
   return (
     <div>
       <BarraMenu />
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<App />} />
+          <Route exact path='/' element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Login" element={<Login />} />
