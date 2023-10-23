@@ -17,6 +17,7 @@ function Login() {
       <Button variant="primary" type="submit">
         Logar
       </Button>
+    <NavLink to="/Esqueci" className="nav-link" activeClassName="active">Esqueci minha senha</NavLink>
     </Form>
   );
 }
