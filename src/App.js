@@ -4,6 +4,7 @@ import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch, FaCopyright } from 'react-
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
+import Esqueci from './pages/Esqueci';
 import BarraMenu from './pages/BarraMenu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -45,6 +46,8 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Esqueci" element={<Esqueci />} />
+
         </Routes>
 
         <footer className="footer mt-auto py-3 text-center">
