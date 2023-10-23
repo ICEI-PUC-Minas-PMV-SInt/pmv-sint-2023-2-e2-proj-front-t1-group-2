@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JavaScript 
 function About(props) {
     return (
         <div className="container mt-5">
-            <h1 className="text-center mb-4"></h1>
+            <h1 className="text-center mb-4">Sobre</h1>
             <p>
                 A questão da divulgação e venda de serviços de profissionais autônomos em suas próprias páginas é um desafio comum enfrentado por muitos indivíduos talentosos.
                 Ter um portfólio online é apenas o primeiro passo; o próximo é atrair a atenção do público-alvo. Para superar essa dificuldade, é essencial adotar estratégias

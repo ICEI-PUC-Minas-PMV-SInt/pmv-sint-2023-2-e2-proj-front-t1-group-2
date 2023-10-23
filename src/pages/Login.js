@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { NavLink } from 'react-router-dom';
 
 function Login() {
   return (
@@ -17,6 +18,7 @@ function Login() {
       <Button variant="primary" type="submit">
         Logar
       </Button>
+		<NavLink to="/Esqueci" className="nav-link" activeClassName="active">Esqueci minha senha</NavLink>
     </Form>
   );
 }
