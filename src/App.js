@@ -1,9 +1,10 @@
 import { NavLink, BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch, FaCopyright } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch, FaCopyright, FaUser } from 'react-icons/fa';
 import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
 import Esqueci from './pages/Esqueci';
+import Cadastro from './pages/Cadastro';
 import Erro from './pages/Erro';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -30,6 +31,9 @@ function App() {
                 <NavLink to="/Login" className="nav-link" activeClassName="active"><FaSignInAlt /> Login</NavLink>
               </li>
               <li className="nav-item">
+                <NavLink to="/Cadastro" className="nav-link" activeClassName="active"><FaUser /> Cadastro</NavLink>
+              </li>
+              <li className="nav-item">
                 <div className="input-group">
                   <input type="text" className="form-control" placeholder="Search" />
                   <div className="input-group-append">
@@ -47,6 +51,7 @@ function App() {
          	<Route path="/About" element={<About />} />
          	<Route path="/Login" element={<Login />} />
          	<Route path="/Esqueci" element={<Esqueci />} />
+         	<Route path="/Cadastro" element={<Cadastro />} />
          	<Route path="/Erro" element={<Erro />} />
 				<Route path='*' element={<Navigate to="/Erro"/>}/>
         </Routes>
