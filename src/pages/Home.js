@@ -28,18 +28,18 @@ const Perfil = ({ nome, profissao, foto }) => (
 
 function Home() {
   return (
-    <div className="container mt-3">
+    <div className="container mt-5">
       <h1 className="text-center mb-4"></h1>
-		<div className='col mb-5'>
-			<div className='row d-flex justify-content-center'>
-      		{perfis.map((perfil, index) => (
-      		  <Perfil key={index} {...perfil} />
-      		))}
-			</div>
-		</div>
+
+      <div className="row">
+        {perfis.map((perfil, index) => (
+          <Perfil key={index} {...perfil} />
+        ))}
+
       <p>
         {/* Seu texto aqui */}
       </p>
+    </div>
     </div>
   );
 }
