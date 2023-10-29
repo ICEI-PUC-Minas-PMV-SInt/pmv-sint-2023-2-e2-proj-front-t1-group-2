@@ -9,12 +9,11 @@ import Erro from './pages/Erro';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import BarraMenu from './pages/BarraMenu';
-import React, { createContext, useState } from 'react';
-import LoginContext from './pages/Context';
+import React, { useState } from 'react';
 
 function App() {
   const [logado, setLogado] = useState(false);
-
+  
   function login() {
     setLogado(true);
   }
@@ -27,15 +26,14 @@ function App() {
     <>
 
       <Router>
-        <LoginContext.Provider value={{ logado, login, logout }} >
-          <BarraMenu />
+          <BarraMenu logado={logado} onLogout={logout} />
 
           <div>
             <Routes>
               <Route exact path='/' element={<Home />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/About" element={<About />} />
-              <Route path="/Login" element={<Login />} />
+              <Route path="/Login" element={<Login onLogin={login} />} />
               <Route path="/Esqueci" element={<Esqueci />} />
               <Route path="/Cadastro" element={<Cadastro />} />
               <Route path="/Erro" element={<Erro />} />
@@ -46,7 +44,6 @@ function App() {
               <FaCopyright /> Grupo 2
             </footer>
           </div>
-        </LoginContext.Provider>
       </Router>
     </>
   );

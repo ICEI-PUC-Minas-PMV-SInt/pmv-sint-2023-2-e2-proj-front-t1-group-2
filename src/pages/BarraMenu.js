@@ -6,13 +6,13 @@ import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch, FaUser } from 'react-icons/fa';
 import InputGroup from 'react-bootstrap/InputGroup';
-import React, { useContext, useState } from 'react';
-import LoginContext from './Context';
+import React, { useState } from 'react';
 import Logout from './Logout';
+import { useNavigate } from 'react-router-dom';
 
-function BarraMenu() {
-    const context = useContext(LoginContext);
+function BarraMenu({logado, onLogout}) {
     const [showLogout, setShowLogout] = useState(false);
+    let navigate = useNavigate();
 
     function displayLogoutModal(event) {
         setShowLogout(true);
@@ -20,6 +20,8 @@ function BarraMenu() {
 
     function handleLogout(event) {
         setShowLogout(false);
+        onLogout();
+        navigate("/");
     }
 
     function handleCancel(event) {
@@ -48,7 +50,7 @@ function BarraMenu() {
                                     <Nav.Link href="/Home"><FaHome /> Home</Nav.Link>
                                     <Nav.Link href="/about"><FaInfoCircle /> About</Nav.Link>
                                     <Nav.Link href="/Cadastro"><FaUser /> Cadastrar</Nav.Link>
-                                    {context.logado
+                                    {logado
                                         ? <Nav.Link onClick={displayLogoutModal}><FaSignInAlt /> Logout</Nav.Link>
                                         : <Nav.Link href="/login"><FaSignInAlt /> Login</Nav.Link>
                                     }
