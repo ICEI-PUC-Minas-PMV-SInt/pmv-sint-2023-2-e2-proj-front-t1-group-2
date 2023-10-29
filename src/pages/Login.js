@@ -5,9 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
+import React, {useContext} from 'react';
+import LoginContext from './Context';
 
 function Login() {
   let navigate = useNavigate();
+
+  const context = useContext(LoginContext);
 
   function logar(event) {
     event.preventDefault();
@@ -20,7 +24,7 @@ function Login() {
     }
 
     if (email !== "" && password !== "") {
-      localStorage.setItem("user", JSON.stringify(user));
+      context.login();
       navigate("/");
     } else {
       alert("Por favor,preencha todos os campos!");
