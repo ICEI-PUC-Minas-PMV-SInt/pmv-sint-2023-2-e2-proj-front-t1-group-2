@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
 import Esqueci from './pages/Esqueci';
+import Cadastro from './pages/Cadastro';
 import Erro from './pages/Erro';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -36,6 +37,7 @@ function App() {
               <Route path="/About" element={<About />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Esqueci" element={<Esqueci />} />
+              <Route path="/Cadastro" element={<Cadastro />} />
               <Route path="/Erro" element={<Erro />} />
               <Route path='*' element={<Navigate to="/Erro" />} />
             </Routes>

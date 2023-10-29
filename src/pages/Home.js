@@ -17,11 +17,11 @@ const perfis = [
 ];
 
 const Perfil = ({ nome, profissao, foto }) => (
-  <div className="perfil-container col-md-6 mb-4 mt-3 mx-4">
+  <div className="perfil-container my-4 mx-5">
     <img src={foto} alt={`Foto do Perfil ${nome}`} className="foto" />
     <div className="info">
-      <h3>{nome}</h3>
-      <h4>{profissao}</h4>
+      <h4>{nome}</h4>
+      <h5>{profissao}</h5>
     </div>
   </div>
 );

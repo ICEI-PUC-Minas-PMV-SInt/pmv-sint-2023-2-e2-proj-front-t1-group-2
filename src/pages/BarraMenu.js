@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaSignInAlt, FaSearch, FaUser } from 'react-icons/fa';
 import InputGroup from 'react-bootstrap/InputGroup';
 import React, { useContext, useState } from 'react';
 import LoginContext from './Context';
@@ -47,6 +47,7 @@ function BarraMenu() {
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
                                     <Nav.Link href="/Home"><FaHome /> Home</Nav.Link>
                                     <Nav.Link href="/about"><FaInfoCircle /> About</Nav.Link>
+                                    <Nav.Link href="/Cadastrp"><FaUser /> Cadastrar</Nav.Link>
                                     {context.logado
                                         ? <Nav.Link onClick={displayLogoutModal}><FaSignInAlt /> Logout</Nav.Link>
                                         : <Nav.Link href="/login"><FaSignInAlt /> Login</Nav.Link>
