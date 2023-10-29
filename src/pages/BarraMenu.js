@@ -47,7 +47,7 @@ function BarraMenu() {
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
                                     <Nav.Link href="/Home"><FaHome /> Home</Nav.Link>
                                     <Nav.Link href="/about"><FaInfoCircle /> About</Nav.Link>
-                                    <Nav.Link href="/Cadastrp"><FaUser /> Cadastrar</Nav.Link>
+                                    <Nav.Link href="/Cadastro"><FaUser /> Cadastrar</Nav.Link>
                                     {context.logado
                                         ? <Nav.Link onClick={displayLogoutModal}><FaSignInAlt /> Logout</Nav.Link>
                                         : <Nav.Link href="/login"><FaSignInAlt /> Login</Nav.Link>
