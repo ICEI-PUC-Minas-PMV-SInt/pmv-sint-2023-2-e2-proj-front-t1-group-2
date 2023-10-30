@@ -17,7 +17,7 @@ const perfis = [
 ];
 
 const Perfil = ({ nome, profissao, foto }) => (
-  <div className="perfil-container my-4 mx-5">
+  <div className="perfil-container my-4 mx-3">
     <img src={foto} alt={`Foto do Perfil ${nome}`} className="foto" />
     <div className="info">
       <h4>{nome}</h4>
