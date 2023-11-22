@@ -9,8 +9,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import React, { useState } from 'react';
 import Logout from './Logout';
 import { useNavigate } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
-function BarraMenu({logado, onLogout}) {
+function BarraMenu({ logado, onLogout }) {
     const [showLogout, setShowLogout] = useState(false);
     let navigate = useNavigate();
 
@@ -28,51 +29,59 @@ function BarraMenu({logado, onLogout}) {
         setShowLogout(false);
     }
 
+    function showModal() {
+        return showLogout;
+    }
+
     return (
         <>
-            {['sm'].map((expand) => (
-                <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
-                    <Container fluid>
-                        <Navbar.Brand href="#">Currículos</Navbar.Brand>
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-                        <Navbar.Offcanvas
-                            id={`offcanvasNavbar-expand-${expand}`}
-                            aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                            placement="end"
-                        >
-                            <Offcanvas.Header closeButton>
-                                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    Offcanvas
-                                </Offcanvas.Title>
-                            </Offcanvas.Header>
-                            <Offcanvas.Body>
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link href="/Home"><FaHome /> Home</Nav.Link>
-                                    <Nav.Link href="/about"><FaInfoCircle /> About</Nav.Link>
-                                    <Nav.Link href="/Cadastro"><FaUser /> Cadastrar</Nav.Link>
-                                    {logado
-                                        ? <Nav.Link onClick={displayLogoutModal}><FaSignInAlt /> Logout</Nav.Link>
-                                        : <Nav.Link href="/login"><FaSignInAlt /> Login</Nav.Link>
-                                    }
-                                </Nav>
-                                <Form className="d-flex">
-                                    <InputGroup className="mb-3">
-                                        <Form.Control
-                                            placeholder="Pesquisar"
-                                            aria-label="Pesquisar"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="outline-secondary" id="button-addon2">
-                                            <FaSearch />
-                                        </Button>
-                                    </InputGroup>
-                                </Form>
-                            </Offcanvas.Body>
-                        </Navbar.Offcanvas>
-                    </Container>
-                </Navbar>
-            ))}
-            {showLogout ? ( < Logout onCancel={handleCancel} onLogout={handleLogout} onHide={handleCancel} show={showLogout} />) : null}
+            <Navbar className="bg-body-tertiary mb-3">
+                <Container fluid>
+                    <Navbar.Brand href="#">Currículos</Navbar.Brand>
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm}`} />
+                    <Navbar.Offcanvas
+                        id={`offcanvasNavbar-expand-sm`}
+                        aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
+                        placement="end"
+                    >
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-sm`}>
+                                Offcanvas
+                            </Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            <Nav className="justify-content-end flex-grow-1 pe-3">
+                                <LinkContainer to="/Home">
+                                    <Nav.Link><FaHome /> Home</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/about">
+                                    <Nav.Link><FaInfoCircle /> About</Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer to="/Cadastro">
+                                    <Nav.Link><FaUser /> Cadastrar</Nav.Link>
+                                </LinkContainer>
+                                <Nav.Link onClick={displayLogoutModal} className={logado() ? '' : 'hidden'} ><FaSignInAlt /> Logout</Nav.Link>
+                                <LinkContainer to="/login">
+                                    <Nav.Link className={!logado() ? '' : 'hidden'}><FaSignInAlt /> Login</Nav.Link>
+                                </LinkContainer>
+                            </Nav>
+                            <Form className="d-flex">
+                                <InputGroup className="mb-3">
+                                    <Form.Control
+                                        placeholder="Pesquisar"
+                                        aria-label="Pesquisar"
+                                        aria-describedby="basic-addon2"
+                                    />
+                                    <Button variant="outline-secondary" id="button-addon2">
+                                        <FaSearch />
+                                    </Button>
+                                </InputGroup>
+                            </Form>
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
+                </Container>
+            </Navbar>
+            <Logout onCancel={handleCancel} onLogout={handleLogout} onHide={handleCancel} show={showModal()} />
         </>
     );
 }

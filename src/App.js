@@ -22,11 +22,15 @@ function App() {
     setLogado(false);
   }
 
+  function isLogado() {
+    return logado;
+  }
+
   return (
     <>
 
       <Router>
-          <BarraMenu logado={logado} onLogout={logout} />
+          <BarraMenu logado={isLogado} onLogout={logout} />
 
           <div>
             <Routes>

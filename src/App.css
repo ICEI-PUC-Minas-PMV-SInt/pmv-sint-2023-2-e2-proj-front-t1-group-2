@@ -91,3 +91,5 @@ color: blanchedalmond;
 .info h4 {
   margin: 0;
 }
+
+.hidden { display:none; }
