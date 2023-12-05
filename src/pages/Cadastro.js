@@ -1,72 +1,92 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useNavigate } from 'react-router-dom';
-import { FormControl } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Button, Form, Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Cadastro() {
-  let navigate = useNavigate();
+   const navigate = useNavigate();
+   const [nome, setNome] = useState("");
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   const [repeatPassword, setRepeatPassword] = useState("");
 
-  function Cadastro(event) {
-    event.preventDefault();
+   function Cadastrar(event) {
+      event.preventDefault();
 
-    var email = document.getElementById("formBasicEmail").value;
-    var password = document.getElementById("formBasicPassword").value;
-    var nome = document.getElementById("formuBasicNome").value;
-    const user = {
-      nome,
-      email,
-      password,
-    }
+      const user = {
+         nome,
+         email,
+         password,
+      };
 
-    if (email !== "" && password !== "") {
-      localStorage.setItem("user", JSON.stringify(user));
-      navigate("/");
-    } else {
-      alert("Por favor,preencha todos os campos!");
-    }
-  }
+      if (email !== "" && password !== "" && password === repeatPassword) {
+         localStorage.setItem("user", JSON.stringify(user));
+         navigate("/");
+      } else {
+         alert("Por favor, preencha todos os campos corretamente!");
+      }
+   }
 
-  return (
-    <Container style={{ marginTop: 80 + 'px' }}>
-      <Row>
-        <Col></Col>
-        <Col xs={6}>
-          <Form.Group classname="mb-3" controlId='formBasicNome' >
-            <Form.Label>Nome*</Form.Label>
-            <FormControl type="Name" placeholder='Digite seu nome completo' />
-            </Form.Group>
+   return (
+      <Container style={{ marginTop: 80 + "px" }}>
+         <Row>
+            <Col></Col>
+            <Col xs={6}>
+               <Form onSubmit={Cadastrar}>
+                  <Form.Group className="mb-3" controlId="formBasicNome">
+                     <Form.Label>Nome*</Form.Label>
+                     <Form.Control
+                        type="text"
+                        placeholder="Digite seu nome completo"
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
+                     />
+                  </Form.Group>
 
-          <Form onSubmit={Cadastro}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email*</Form.Label>
-              <Form.Control type="email" placeholder="Digite seu email" />
-            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                     <Form.Label>Email*</Form.Label>
+                     <Form.Control
+                        type="email"
+                        placeholder="Digite seu email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                     />
+                  </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Senha*</Form.Label>
-              <Form.Control type="password" placeholder="Digite sua senha" />
-            </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                     <Form.Label>Senha*</Form.Label>
+                     <Form.Control
+                        type="password"
+                        placeholder="Digite sua senha"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                     />
+                  </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Repetir Senha*</Form.Label>
-              <Form.Control type="password" placeholder="Repita sua senha" />
-            </Form.Group>
-            <Button variant="primary" type="submit" style={{ marginTop: 10 + 'px' }}>
-              Cadastrar
-            </Button>
-
-          </Form>
-        </Col>
-        <Col></Col>
-      </Row>
-
-    </Container>
-
-  );
+                  <Form.Group
+                     className="mb-3"
+                     controlId="formBasicRepeatPassword"
+                  >
+                     <Form.Label>Repetir Senha*</Form.Label>
+                     <Form.Control
+                        type="password"
+                        placeholder="Repita sua senha"
+                        value={repeatPassword}
+                        onChange={(e) => setRepeatPassword(e.target.value)}
+                     />
+                  </Form.Group>
+                  <Button
+                     variant="primary"
+                     type="submit"
+                     style={{ marginTop: 10 + "px" }}
+                  >
+                     Cadastrar
+                  </Button>
+               </Form>
+            </Col>
+            <Col></Col>
+         </Row>
+      </Container>
+   );
 }
 
 export default Cadastro;

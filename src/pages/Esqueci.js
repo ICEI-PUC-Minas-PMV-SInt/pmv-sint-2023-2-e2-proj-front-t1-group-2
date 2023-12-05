@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import React, { useState } from "react"
+import "bootstrap/dist/js/bootstrap.bundle.min"
+import { useNavigate } from "react-router-dom"
 
 function Esqueci(props) {
    const [email, setEmail] = useState("");
    const [showAlert, setShowAlert] = useState(false);
    const [showModal, setShowModal] = useState(false);
+
+   const navigate  = useNavigate()
 
    const handleSubmit = (event) => {
       event.preventDefault();
@@ -58,7 +61,7 @@ function Esqueci(props) {
                                  <label for="codigo">Codigo</label>
                                  <input
                                     type="text"
-                                    class="form-control "
+                                    class="form-control"
                                     id="codigo"
                                     placeholder="!@#$%&?"
                                  />
@@ -66,7 +69,7 @@ function Esqueci(props) {
                               <div class="form-group">
                                  <label for="password">Nova senha</label>
                                  <input
-                                    type="text"
+                                    type="password"
                                     class="form-control"
                                     id="password"
                                  />
@@ -88,9 +91,9 @@ function Esqueci(props) {
                               type="button"
                               className="btn btn-primary"
                               data-dismiss="modal"
-                              onClick={() => setShowAlert(false)}
+                              onClick={() => navigate(-1)}
                            >
-                              Enviar
+                              Finalizar
                            </button>
 									<button type="button" 
 										className="btn btn-secondary" 
